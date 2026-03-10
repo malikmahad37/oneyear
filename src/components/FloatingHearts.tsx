@@ -2,14 +2,6 @@ import React, { useMemo } from 'react';
 import { Heart } from 'lucide-react';
 import './AudioPlayer.css';
 
-interface HeartProp {
-    id: number;
-    left: string;
-    size: number;
-    duration: string;
-    delay: string;
-    drift: string;
-}
 
 const FloatingHearts: React.FC = () => {
     const hearts = useMemo(() => {
