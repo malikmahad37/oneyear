@@ -70,10 +70,12 @@ const Gallery: React.FC = () => {
                             {(activeTab === 'photo' || activeTab === 'chat') && (
                                 <>
                                     <img src={memory.url} alt={memory.caption} className={`media-image ${activeTab === 'chat' ? 'chat-image' : ''}`} />
-                                    <div className="media-overlay">
-                                        <div className="media-title">{memory.caption || 'Beautiful Memory'}</div>
-                                        {memory.date && <div className="media-date">{memory.date}</div>}
-                                    </div>
+                                    {(memory.caption || memory.date) && (
+                                        <div className="media-overlay">
+                                            {memory.caption && <div className="media-title">{memory.caption}</div>}
+                                            {memory.date && <div className="media-date">{memory.date}</div>}
+                                        </div>
+                                    )}
                                 </>
                             )}
                         </motion.div>

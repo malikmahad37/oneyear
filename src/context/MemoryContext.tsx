@@ -118,74 +118,62 @@ export const MemoryProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     {
       id: 'photo-1',
       type: 'photo',
-      url: '/memories/alishba1.jpg',
-      caption: 'Beautiful ❤️'
+      url: '/memories/alishba1.jpg'
     },
     {
       id: 'photo-2',
       type: 'photo',
-      url: '/memories/alishba2.jpg',
-      caption: 'My Love 💕'
+      url: '/memories/alishba2.jpg'
     },
     {
       id: 'photo-3',
       type: 'photo',
-      url: '/memories/alishba3.jpg',
-      caption: 'Cute 🥰'
+      url: '/memories/alishba3.jpg'
     },
     {
       id: 'photo-4',
       type: 'photo',
-      url: '/memories/alishba4.jpg',
-      caption: 'Mashallah ✨'
+      url: '/memories/alishba4.jpg'
     },
     {
       id: 'photo-5',
       type: 'photo',
-      url: '/memories/alishba5.jpg',
-      caption: 'Beautiful ❤️'
+      url: '/memories/alishba5.jpg'
     },
     {
       id: 'photo-6',
       type: 'photo',
-      url: '/memories/alishba6.jpg',
-      caption: 'So Pretty ✨'
+      url: '/memories/alishba6.jpg'
     },
     {
       id: 'photo-7',
       type: 'photo',
-      url: '/memories/alishba7.jpg',
-      caption: 'Gorgeous 🥰'
+      url: '/memories/alishba7.jpg'
     },
     {
       id: 'photo-8',
       type: 'photo',
-      url: '/memories/alishba8.jpg',
-      caption: 'Cutie 💕'
+      url: '/memories/alishba8.jpg'
     },
     {
       id: 'photo-9',
       type: 'photo',
-      url: '/memories/chat25.jpg',
-      caption: 'Lovely 💖'
+      url: '/memories/chat25.jpg'
     },
     {
       id: 'photo-10',
       type: 'photo',
-      url: '/memories/alishba9.jpg',
-      caption: 'Aww 🥺'
+      url: '/memories/alishba9.jpg'
     },
     {
       id: 'photo-11',
       type: 'photo',
-      url: '/memories/alishba10.jpg',
-      caption: 'Princess 👑'
+      url: '/memories/alishba10.jpg'
     },
     {
       id: 'photo-12',
       type: 'photo',
-      url: '/memories/chat24.jpg',
-      caption: 'Snapchat 10 ✨'
+      url: '/memories/chat24.jpg'
     }
   ]);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
