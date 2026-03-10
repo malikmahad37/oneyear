@@ -91,20 +91,23 @@ const Story: React.FC = () => {
                             initial={{ scale: 0.8, y: 50, opacity: 0 }}
                             animate={{ scale: 1, y: 0, opacity: 1 }}
                             exit={{ scale: 0.8, y: 50, opacity: 0 }}
-                            onClick={e => e.stopPropagation()}
+                            onClick={() => setSelectedEvent(null)}
+                            style={{ cursor: 'pointer' }}
                         >
-                            <button className="modal-close" onClick={() => setSelectedEvent(null)}>
+                            <button className="modal-close" onClick={(e) => { e.stopPropagation(); setSelectedEvent(null); }}>
                                 <X size={24} />
                             </button>
-                            <h2 className="story-title text-gradient" style={{ fontSize: '2rem', marginBottom: '8px' }}>
-                                {selectedEvent.title}
-                            </h2>
-                            <p className="timeline-date" style={{ marginBottom: '16px' }}>{selectedEvent.date}</p>
-                            <p className="timeline-desc">{selectedEvent.description}</p>
+                            <div onClick={(e) => e.stopPropagation()} style={{ cursor: 'default' }}>
+                                <h2 className="story-title text-gradient" style={{ fontSize: '2rem', marginBottom: '8px' }}>
+                                    {selectedEvent.title}
+                                </h2>
+                                <p className="timeline-date" style={{ marginBottom: '16px' }}>{selectedEvent.date}</p>
+                                <p className="timeline-desc">{selectedEvent.description}</p>
 
-                            {selectedEvent.image && (
-                                <img src={selectedEvent.image} alt={selectedEvent.title} className="modal-image" />
-                            )}
+                                {selectedEvent.image && (
+                                    <img src={selectedEvent.image} alt={selectedEvent.title} className="modal-image" />
+                                )}
+                            </div>
                         </motion.div>
                     </motion.div>
                 )}

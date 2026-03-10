@@ -96,15 +96,15 @@ const Gallery: React.FC = () => {
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.8, opacity: 0 }}
-                            onClick={e => e.stopPropagation()}
-                            style={{ background: 'transparent', boxShadow: 'none' }}
+                            onClick={() => setSelectedMedia(null)}
+                            style={{ background: 'transparent', boxShadow: 'none', cursor: 'pointer' }}
                         >
-                            <button className="modal-close" onClick={() => setSelectedMedia(null)}>
+                            <button className="modal-close" onClick={(e) => { e.stopPropagation(); setSelectedMedia(null); }}>
                                 <X size={32} />
                             </button>
-                            <img src={selectedMedia.url} alt="Fullscreen Memory" className="modal-image" />
+                            <img src={selectedMedia.url} alt="Fullscreen Memory" className="modal-image" onClick={(e) => e.stopPropagation()} />
                             {(selectedMedia.caption || selectedMedia.date) && (
-                                <div className="text-white text-center mt-6">
+                                <div className="text-white text-center mt-6" onClick={(e) => e.stopPropagation()}>
                                     <h2 className="text-2xl font-bold font-outfit">{selectedMedia.caption}</h2>
                                     <p className="opacity-80 mt-2">{selectedMedia.date}</p>
                                 </div>
