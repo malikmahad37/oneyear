@@ -52,36 +52,7 @@ export const MemoryProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       url: '/memories/chat5.jpg',
       caption: 'Sunday'
     },
-    {
-      id: 'chat-6',
-      type: 'chat',
-      url: '/memories/chat6.jpg',
-      caption: 'WhatsApp Chat 6'
-    },
-    {
-      id: 'chat-7',
-      type: 'chat',
-      url: '/memories/chat7.jpg',
-      caption: 'WhatsApp Chat 7'
-    },
-    {
-      id: 'chat-8',
-      type: 'chat',
-      url: '/memories/chat8.jpg',
-      caption: 'WhatsApp Chat 8'
-    },
-    {
-      id: 'chat-9',
-      type: 'chat',
-      url: '/memories/chat9.jpg',
-      caption: 'WhatsApp Chat 9'
-    },
-    {
-      id: 'chat-10',
-      type: 'chat',
-      url: '/memories/chat10.jpg',
-      caption: 'WhatsApp Chat 10'
-    },
+
     {
       id: 'chat-11',
       type: 'chat',
@@ -136,24 +107,7 @@ export const MemoryProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       url: '/memories/chat19.jpg',
       caption: 'Snapchat 5'
     },
-    {
-      id: 'chat-20',
-      type: 'chat',
-      url: '/memories/chat20.jpg',
-      caption: 'Snapchat 6'
-    },
-    {
-      id: 'chat-21',
-      type: 'chat',
-      url: '/memories/chat21.jpg',
-      caption: 'Snapchat 7'
-    },
-    {
-      id: 'chat-22',
-      type: 'chat',
-      url: '/memories/chat22.jpg',
-      caption: 'Snapchat 8'
-    },
+
     {
       id: 'chat-23',
       type: 'chat',
