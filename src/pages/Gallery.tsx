@@ -99,7 +99,7 @@ const Gallery: React.FC = () => {
                             onClick={e => e.stopPropagation()}
                             style={{ background: 'transparent', boxShadow: 'none' }}
                         >
-                            <button className="modal-close" onClick={() => setSelectedMedia(null)} style={{ color: 'white' }}>
+                            <button className="modal-close" onClick={() => setSelectedMedia(null)}>
                                 <X size={32} />
                             </button>
                             <img src={selectedMedia.url} alt="Fullscreen Memory" className="modal-image" />

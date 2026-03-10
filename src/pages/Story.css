@@ -113,18 +113,29 @@
 }
 
 .modal-close {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
-    background: none;
-    border: none;
+    background: rgba(20, 15, 20, 0.7);
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    color: var(--color-text);
-    transition: color 0.3s;
+    color: var(--color-primary) !important;
+    transition: all 0.3s ease;
+    z-index: 101;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .modal-close:hover {
-    color: var(--color-primary);
+    background: var(--color-primary);
+    color: white !important;
+    transform: scale(1.1);
 }
 
 .modal-image {
