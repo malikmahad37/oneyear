@@ -114,7 +114,17 @@ const Gallery: React.FC = () => {
                 )}
             </AnimatePresence>
 
-            <NextPageButton to="/dates" label="Khaas Tareekhein" />
+            {activeTab === 'photo' ? (
+                <NextPageButton
+                    label="Chat ki Yaadein"
+                    onClick={() => {
+                        setActiveTab('chat');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                />
+            ) : (
+                <NextPageButton to="/dates" label="Khaas Tareekhein" />
+            )}
         </motion.div>
     );
 };
