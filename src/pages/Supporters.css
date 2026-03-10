@@ -1,0 +1,100 @@
+.supporters-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.supporters-header {
+    margin-bottom: 60px;
+}
+
+.supporters-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.supporters-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text);
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.supporters-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.supporter-card {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.supporter-decorative-bg {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    opacity: 0.05;
+}
+
+.supporter-avatar {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-purple));
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.supporter-content {
+    flex: 1;
+}
+
+.supporter-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 12px;
+}
+
+.supporter-role {
+    color: var(--color-purple);
+    font-weight: 600;
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.supporter-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .supporter-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+}

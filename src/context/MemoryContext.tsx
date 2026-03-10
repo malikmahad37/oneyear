@@ -1,0 +1,265 @@
+import React, { createContext, useContext, useState } from 'react';
+import type { ReactNode } from 'react';
+
+export interface MemoryItem {
+  id: string;
+  type: 'photo' | 'chat' | 'voice' | 'video';
+  url: string;
+  thumbnail?: string;
+  caption?: string;
+  date?: string;
+}
+
+interface MemoryContextType {
+  memories: MemoryItem[];
+  addMemory: (memory: MemoryItem) => void;
+  removeMemory: (id: string) => void;
+  isMusicPlaying: boolean;
+  toggleMusic: () => void;
+}
+
+const MemoryContext = createContext<MemoryContextType | undefined>(undefined);
+
+export const MemoryProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [memories, setMemories] = useState<MemoryItem[]>([
+    {
+      id: 'chat-1',
+      type: 'chat',
+      url: '/memories/chat1.jpg',
+      caption: '20 August 2025 - 22 August 2025'
+    },
+    {
+      id: 'chat-2',
+      type: 'chat',
+      url: '/memories/chat2.jpg',
+      caption: '23 August 2025'
+    },
+    {
+      id: 'chat-3',
+      type: 'chat',
+      url: '/memories/chat3.jpg',
+      caption: 'Saturday'
+    },
+    {
+      id: 'chat-4',
+      type: 'chat',
+      url: '/memories/chat4.jpg',
+      caption: 'Saturday (Continued)'
+    },
+    {
+      id: 'chat-5',
+      type: 'chat',
+      url: '/memories/chat5.jpg',
+      caption: 'Sunday'
+    },
+    {
+      id: 'chat-6',
+      type: 'chat',
+      url: '/memories/chat6.jpg',
+      caption: 'WhatsApp Chat 6'
+    },
+    {
+      id: 'chat-7',
+      type: 'chat',
+      url: '/memories/chat7.jpg',
+      caption: 'WhatsApp Chat 7'
+    },
+    {
+      id: 'chat-8',
+      type: 'chat',
+      url: '/memories/chat8.jpg',
+      caption: 'WhatsApp Chat 8'
+    },
+    {
+      id: 'chat-9',
+      type: 'chat',
+      url: '/memories/chat9.jpg',
+      caption: 'WhatsApp Chat 9'
+    },
+    {
+      id: 'chat-10',
+      type: 'chat',
+      url: '/memories/chat10.jpg',
+      caption: 'WhatsApp Chat 10'
+    },
+    {
+      id: 'chat-11',
+      type: 'chat',
+      url: '/memories/chat11.jpg',
+      caption: 'WhatsApp Chat 11'
+    },
+    {
+      id: 'chat-12',
+      type: 'chat',
+      url: '/memories/chat12.jpg',
+      caption: 'WhatsApp Chat 12'
+    },
+    {
+      id: 'chat-13',
+      type: 'chat',
+      url: '/memories/chat13.jpg',
+      caption: 'WhatsApp Chat 13'
+    },
+    {
+      id: 'chat-14',
+      type: 'chat',
+      url: '/memories/chat14.jpg',
+      caption: 'WhatsApp Chat 14'
+    },
+    {
+      id: 'chat-15',
+      type: 'chat',
+      url: '/memories/chat15.jpg',
+      caption: 'Snapchat 1'
+    },
+    {
+      id: 'chat-16',
+      type: 'chat',
+      url: '/memories/chat16.jpg',
+      caption: 'Snapchat 2'
+    },
+    {
+      id: 'chat-17',
+      type: 'chat',
+      url: '/memories/chat17.jpg',
+      caption: 'Snapchat 3'
+    },
+    {
+      id: 'chat-18',
+      type: 'chat',
+      url: '/memories/chat18.jpg',
+      caption: 'Snapchat 4'
+    },
+    {
+      id: 'chat-19',
+      type: 'chat',
+      url: '/memories/chat19.jpg',
+      caption: 'Snapchat 5'
+    },
+    {
+      id: 'chat-20',
+      type: 'chat',
+      url: '/memories/chat20.jpg',
+      caption: 'Snapchat 6'
+    },
+    {
+      id: 'chat-21',
+      type: 'chat',
+      url: '/memories/chat21.jpg',
+      caption: 'Snapchat 7'
+    },
+    {
+      id: 'chat-22',
+      type: 'chat',
+      url: '/memories/chat22.jpg',
+      caption: 'Snapchat 8'
+    },
+    {
+      id: 'chat-23',
+      type: 'chat',
+      url: '/memories/chat23.jpg',
+      caption: 'Snapchat 9'
+    },
+
+    {
+      id: 'photo-1',
+      type: 'photo',
+      url: '/memories/alishba1.jpg',
+      caption: 'Beautiful ❤️'
+    },
+    {
+      id: 'photo-2',
+      type: 'photo',
+      url: '/memories/alishba2.jpg',
+      caption: 'My Love 💕'
+    },
+    {
+      id: 'photo-3',
+      type: 'photo',
+      url: '/memories/alishba3.jpg',
+      caption: 'Cute 🥰'
+    },
+    {
+      id: 'photo-4',
+      type: 'photo',
+      url: '/memories/alishba4.jpg',
+      caption: 'Mashallah ✨'
+    },
+    {
+      id: 'photo-5',
+      type: 'photo',
+      url: '/memories/alishba5.jpg',
+      caption: 'Beautiful ❤️'
+    },
+    {
+      id: 'photo-6',
+      type: 'photo',
+      url: '/memories/alishba6.jpg',
+      caption: 'So Pretty ✨'
+    },
+    {
+      id: 'photo-7',
+      type: 'photo',
+      url: '/memories/alishba7.jpg',
+      caption: 'Gorgeous 🥰'
+    },
+    {
+      id: 'photo-8',
+      type: 'photo',
+      url: '/memories/alishba8.jpg',
+      caption: 'Cutie 💕'
+    },
+    {
+      id: 'photo-9',
+      type: 'photo',
+      url: '/memories/chat25.jpg',
+      caption: 'Lovely 💖'
+    },
+    {
+      id: 'photo-10',
+      type: 'photo',
+      url: '/memories/alishba9.jpg',
+      caption: 'Aww 🥺'
+    },
+    {
+      id: 'photo-11',
+      type: 'photo',
+      url: '/memories/alishba10.jpg',
+      caption: 'Princess 👑'
+    },
+    {
+      id: 'photo-12',
+      type: 'photo',
+      url: '/memories/chat24.jpg',
+      caption: 'Snapchat 10 ✨'
+    }
+  ]);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+
+  const addMemory = (memory: MemoryItem) => {
+    setMemories(prev => [memory, ...prev]);
+  };
+
+  const removeMemory = (id: string) => {
+    setMemories(prev => prev.filter(m => m.id !== id));
+  };
+
+  const toggleMusic = () => {
+    setIsMusicPlaying(prev => !prev);
+    // Note: Actual audio playing logic will reside in a global AudioComponent
+  };
+
+  return (
+    <MemoryContext.Provider value={{ memories, addMemory, removeMemory, isMusicPlaying, toggleMusic }}>
+      {children}
+    </MemoryContext.Provider>
+  );
+};
+
+export const useMemory = () => {
+  const context = useContext(MemoryContext);
+  if (context === undefined) {
+    throw new Error('useMemory must be used within a MemoryProvider');
+  }
+  return context;
+};

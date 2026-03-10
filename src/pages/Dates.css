@@ -1,0 +1,83 @@
+.dates-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.dates-header {
+    margin-bottom: 60px;
+}
+
+.dates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.date-card {
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.date-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(201, 24, 74, 0.15);
+}
+
+.date-icon-container {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+    background: linear-gradient(135deg, rgba(255, 77, 109, 0.1), rgba(199, 125, 255, 0.1));
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 77, 109, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    animation: spin-slow 20s linear infinite;
+}
+
+.date-icon-inner {
+    animation: spin-slow-reverse 20s linear infinite;
+}
+
+.date-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-secondary);
+    font-family: 'Outfit', sans-serif;
+}
+
+.date-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.date-desc {
+    font-size: 1rem;
+    color: var(--color-text);
+    opacity: 0.8;
+}
+
+@keyframes spin-slow {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-slow-reverse {
+    100% {
+        transform: rotate(-360deg);
+    }
+}

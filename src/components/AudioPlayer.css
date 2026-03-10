@@ -1,0 +1,47 @@
+.heart-container {
+    position: absolute;
+    bottom: 0;
+    color: var(--color-primary);
+    opacity: 0.2;
+}
+
+.audio-player-wrapper {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 50;
+}
+
+.audio-toggle-btn {
+    padding: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: float 3s ease-in-out infinite;
+}
+
+.audio-icon-wrapper {
+    position: relative;
+}
+
+.music-note {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
