@@ -25,155 +25,152 @@ export const MemoryProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     {
       id: 'chat-1',
       type: 'chat',
-      url: '/memories/chat1.jpg',
-      caption: '20 August 2025 - 22 August 2025'
+      url: '/memories/chat1.jpg'
     },
     {
       id: 'chat-2',
       type: 'chat',
-      url: '/memories/chat2.jpg',
-      caption: '23 August 2025'
+      url: '/memories/chat2.jpg'
     },
     {
       id: 'chat-3',
       type: 'chat',
-      url: '/memories/chat3.jpg',
-      caption: 'Saturday'
+      url: '/memories/chat3.jpg'
     },
     {
       id: 'chat-4',
       type: 'chat',
-      url: '/memories/chat4.jpg',
-      caption: 'Saturday (Continued)'
+      url: '/memories/chat4.jpg'
     },
     {
       id: 'chat-5',
       type: 'chat',
-      url: '/memories/chat5.jpg',
-      caption: 'Sunday'
+      url: '/memories/chat5.jpg'
     },
 
     {
       id: 'chat-11',
       type: 'chat',
-      url: '/memories/chat11.jpg',
-      caption: 'WhatsApp Chat 11'
+      url: '/memories/chat11.jpg'
     },
     {
       id: 'chat-12',
       type: 'chat',
-      url: '/memories/chat12.jpg',
-      caption: 'WhatsApp Chat 12'
+      url: '/memories/chat12.jpg'
     },
     {
       id: 'chat-13',
       type: 'chat',
-      url: '/memories/chat13.jpg',
-      caption: 'WhatsApp Chat 13'
+      url: '/memories/chat13.jpg'
     },
     {
       id: 'chat-14',
       type: 'chat',
-      url: '/memories/chat14.jpg',
-      caption: 'WhatsApp Chat 14'
+      url: '/memories/chat14.jpg'
     },
     {
       id: 'chat-15',
       type: 'chat',
-      url: '/memories/chat15.jpg',
-      caption: 'Snapchat 1'
+      url: '/memories/chat15.jpg'
     },
     {
       id: 'chat-16',
       type: 'chat',
-      url: '/memories/chat16.jpg',
-      caption: 'Snapchat 2'
+      url: '/memories/chat16.jpg'
     },
     {
       id: 'chat-17',
       type: 'chat',
-      url: '/memories/chat17.jpg',
-      caption: 'Snapchat 3'
+      url: '/memories/chat17.jpg'
     },
     {
       id: 'chat-18',
       type: 'chat',
-      url: '/memories/chat18.jpg',
-      caption: 'Snapchat 4'
+      url: '/memories/chat18.jpg'
     },
     {
       id: 'chat-19',
       type: 'chat',
-      url: '/memories/chat19.jpg',
-      caption: 'Snapchat 5'
+      url: '/memories/chat19.jpg'
     },
 
     {
       id: 'chat-23',
       type: 'chat',
-      url: '/memories/chat23.jpg',
-      caption: 'Snapchat 9'
+      url: '/memories/chat23.jpg'
     },
 
     {
       id: 'photo-1',
       type: 'photo',
-      url: '/memories/alishba1.jpg'
+      url: '/memories/alishba1.jpg',
+      caption: 'Beautiful ❤️'
     },
     {
       id: 'photo-2',
       type: 'photo',
-      url: '/memories/alishba2.jpg'
+      url: '/memories/alishba2.jpg',
+      caption: 'My Love 💕'
     },
     {
       id: 'photo-3',
       type: 'photo',
-      url: '/memories/alishba3.jpg'
+      url: '/memories/alishba3.jpg',
+      caption: 'Cute 🥰'
     },
     {
       id: 'photo-4',
       type: 'photo',
-      url: '/memories/alishba4.jpg'
+      url: '/memories/alishba4.jpg',
+      caption: 'Mashallah ✨'
     },
     {
       id: 'photo-5',
       type: 'photo',
-      url: '/memories/alishba5.jpg'
+      url: '/memories/alishba5.jpg',
+      caption: 'Beautiful ❤️'
     },
     {
       id: 'photo-6',
       type: 'photo',
-      url: '/memories/alishba6.jpg'
+      url: '/memories/alishba6.jpg',
+      caption: 'So Pretty ✨'
     },
     {
       id: 'photo-7',
       type: 'photo',
-      url: '/memories/alishba7.jpg'
+      url: '/memories/alishba7.jpg',
+      caption: 'Gorgeous 🥰'
     },
     {
       id: 'photo-8',
       type: 'photo',
-      url: '/memories/alishba8.jpg'
+      url: '/memories/alishba8.jpg',
+      caption: 'Cutie 💕'
     },
     {
       id: 'photo-9',
       type: 'photo',
-      url: '/memories/chat25.jpg'
+      url: '/memories/chat25.jpg',
+      caption: 'Lovely 💖'
     },
     {
       id: 'photo-10',
       type: 'photo',
-      url: '/memories/alishba9.jpg'
+      url: '/memories/alishba9.jpg',
+      caption: 'Aww 🥺'
     },
     {
       id: 'photo-11',
       type: 'photo',
-      url: '/memories/alishba10.jpg'
+      url: '/memories/alishba10.jpg',
+      caption: 'Princess 👑'
     },
     {
       id: 'photo-12',
       type: 'photo',
-      url: '/memories/chat24.jpg'
+      url: '/memories/chat24.jpg',
+      caption: 'Snapchat 10 ✨'
     }
   ]);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
