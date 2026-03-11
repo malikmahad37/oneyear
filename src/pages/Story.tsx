@@ -15,7 +15,7 @@ interface TimelineEvent {
 const events: TimelineEvent[] = [
     {
         id: 1,
-        date: '23 February 2025',
+        date: '23 March 2025',
         title: 'Jab Hum Pehli Dafa Mile',
         description: 'Hamari khoobsurat kahani ki ibtida. Sab kuch yahan se shuru hua, aur tab se zindagi kitni haseen ho gayi hai.',
         image: 'https://images.unsplash.com/photo-1518199266791-5375a83164ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
