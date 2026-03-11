@@ -15,7 +15,7 @@ const Dates: React.FC = () => {
         {
             id: 1,
             title: 'Pehli Mulaqat',
-            value: 'Feb 23',
+            value: 'Mar 23',
             desc: 'Wo khoobsurat din jab hamari nazrein mili.',
             icon: <CalendarHeart size={36} />
         },
