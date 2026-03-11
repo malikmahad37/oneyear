@@ -8,7 +8,12 @@ const Dates: React.FC = () => {
     const [daysSinceMet, setDaysSinceMet] = useState(0);
 
     useEffect(() => {
-        setDaysSinceMet(365);
+        // Calculate days from 23 March 2025 to today
+        const startDate = new Date('2025-03-23T00:00:00');
+        const today = new Date();
+        const diffTime = Math.abs(today.getTime() - startDate.getTime());
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        setDaysSinceMet(diffDays);
     }, []);
 
     const specialDates = [
