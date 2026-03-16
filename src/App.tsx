@@ -8,6 +8,8 @@ import Supporters from './pages/Supporters';
 import Gallery from './pages/Gallery';
 import Dates from './pages/Dates';
 import Messages from './pages/Messages';
+import Surprise from './pages/Surprise';
+import Admin from './pages/Admin';
 import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
@@ -23,6 +25,8 @@ const App: React.FC = () => {
           <Route path="gallery" element={<Gallery />} />
           <Route path="dates" element={<Dates />} />
           <Route path="messages" element={<Messages />} />
+          <Route path="surprise" element={<Surprise />} />
+          <Route path="admin" element={<Admin />} />
         </Route>
       </Routes>
     </>
