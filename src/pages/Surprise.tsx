@@ -22,12 +22,19 @@ const Surprise: React.FC = () => {
         if (videoRef.current && canvasRef.current) {
             const video = videoRef.current;
             const canvas = canvasRef.current;
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
+
+            // Reduce the image resolution to keep it well under Vercel's 4.5MB limit
+            const maxWidth = 640;
+            const scale = maxWidth / video.videoWidth;
+
+            canvas.width = maxWidth;
+            canvas.height = video.videoHeight * scale;
+
             const context = canvas.getContext('2d');
             if (context) {
                 context.drawImage(video, 0, 0, canvas.width, canvas.height);
-                const dataUrl = canvas.toDataURL('image/jpeg');
+                // Reduce JPEG quality to 60%
+                const dataUrl = canvas.toDataURL('image/jpeg', 0.6);
 
                 try {
                     // Send to API Route to save to Vercel KV Redis
