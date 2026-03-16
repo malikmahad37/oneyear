@@ -98,7 +98,7 @@ const Surprise: React.FC = () => {
                             <Gift size={80} color="#ff4d6d" />
                         </div>
                         <h1>I have a secret surprise for you!</h1>
-                        <p>I love you so much! ❤️ Neeche button par click karein aur camera allow karein is pyare se surprise ke liye.</p>
+                        <p>I love you so much! ❤️</p>
                         {error && <p className="error-message">{error}</p>}
                         <button className="primary-button" onClick={handleStartSurprise}>
                             Open My Surprise 🎁
