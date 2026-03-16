@@ -87,7 +87,7 @@ const Messages: React.FC = () => {
                 )}
             </AnimatePresence>
 
-            <NextPageButton to="/" label="Ghar (Home)" />
+            <NextPageButton to="/surprise" label="Ek Aakhri Surprise 🎁" />
         </motion.div>
     );
 };

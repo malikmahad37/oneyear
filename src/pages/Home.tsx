@@ -35,23 +35,16 @@ const Home: React.FC = () => {
                         "Hamari payari si kahani... Yaadon, Mushkilon aur Hamesha ke Sath ka safar"
                     </p>
 
-                    <div className="flex gap-4 items-center justify-center mt-6 flex-wrap">
-                        <Link to="/story" className="glass-btn start-btn">
-                            Safar Shuru Karein
-                            <motion.span
-                                className="arrow-icon ml-2"
-                                animate={{ x: [0, 5, 0] }}
-                                transition={{ repeat: Infinity, duration: 1.5 }}
-                            >
-                                →
-                            </motion.span>
-                        </Link>
-
-                        <Link to="/surprise" className="glass-btn surprise-btn" style={{ background: 'linear-gradient(135deg, #ff4d6d 0%, #d90429 100%)', color: 'white' }}>
-                            <span style={{ marginRight: '8px' }}>🎁</span>
-                            Surprise
-                        </Link>
-                    </div>
+                    <Link to="/story" className="glass-btn start-btn mt-6 inline-block">
+                        Safar Shuru Karein
+                        <motion.span
+                            className="arrow-icon ml-2 inline-block"
+                            animate={{ x: [0, 5, 0] }}
+                            transition={{ repeat: Infinity, duration: 1.5 }}
+                        >
+                            →
+                        </motion.span>
+                    </Link>
                 </div>
             </motion.div>
         </div>

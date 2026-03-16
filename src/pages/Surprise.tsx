@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Gift, Heart, Sparkles } from 'lucide-react';
+import NextPageButton from '../components/NextPageButton';
 import './Surprise.css';
 
 const Surprise: React.FC = () => {
@@ -136,6 +137,11 @@ const Surprise: React.FC = () => {
                     style={{ display: 'none' }}
                 />
             </div>
+            {step === 'surprised' && (
+                <div style={{ position: 'absolute', bottom: '2rem', width: '100%' }}>
+                    <NextPageButton to="/" label="Waapas Ghar (Home)" />
+                </div>
+            )}
         </div>
     );
 };
