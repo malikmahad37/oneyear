@@ -1,11 +1,11 @@
+import { kv } from '@vercel/kv';
+
 export default async function handler(req, res) {
     if (req.method !== 'GET') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
     try {
-        const { kv } = require('@vercel/kv');
-
         // Fetch from Vercel KV Redis database
         let surprises = await kv.get('surprises') || [];
 

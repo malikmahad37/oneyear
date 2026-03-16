@@ -1,10 +1,11 @@
+import { kv } from '@vercel/kv';
+
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method naturally not allowed' });
     }
 
     try {
-        const { kv } = require('@vercel/kv');
         const { image, date, caption } = req.body;
 
         if (!image) {
