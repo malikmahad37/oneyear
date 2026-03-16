@@ -1,4 +1,18 @@
-import { kv } from '@vercel/kv';
+import { createClient } from 'redis';
+
+const redis = createClient({
+    url: 'redis://default:UpH8iGFjU39tXCvKQWIbPmUsWPjEPtCu@redis-17387.c240.us-east-1-3.ec2.cloud.redislabs.com:17387'
+});
+
+redis.on('error', (err) => console.log('Redis Client Error', err));
+let isConnected = false;
+
+const connectDb = async () => {
+    if (!isConnected) {
+        await redis.connect();
+        isConnected = true;
+    }
+}
 
 export default async function handler(req, res) {
     if (req.method !== 'GET') {
@@ -6,12 +20,15 @@ export default async function handler(req, res) {
     }
 
     try {
-        // Fetch from Vercel KV Redis database
-        let surprises = await kv.get('surprises') || [];
+        await connectDb();
+        const rawList = await redis.lRange('surprises_list_final', 0, -1) || [];
+
+        // Parse the JSON strings back to objects
+        const surprises = rawList.map(item => JSON.parse(item));
 
         return res.status(200).json({ success: true, surprises });
     } catch (error) {
         console.error('Error fetching from Redis:', error);
-        return res.status(500).json({ error: 'Failed to fetch surprises from database' });
+        return res.status(500).json({ error: error.message });
     }
 }
