@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Lock, Image as ImageIcon } from 'lucide-react';
+import { Lock, Image as ImageIcon, Trash2 } from 'lucide-react';
 import './Admin.css';
 
 interface SurpriseEntry {
@@ -41,6 +41,26 @@ const Admin: React.FC = () => {
             console.error('Error fetching surprises', err);
         }
         setLoading(false);
+    };
+
+    const handleDelete = async (id: string) => {
+        if (!window.confirm("Are you sure you want to delete this photo forever?")) return;
+        try {
+            const response = await fetch('/api/delete-surprise', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id })
+            });
+            const data = await response.json();
+            if (data.success) {
+                setSurprises(prev => prev.filter(s => s.id !== id));
+            } else {
+                alert("Failed to delete capture.");
+            }
+        } catch (err) {
+            console.error("Error deleting:", err);
+            alert("Error deleting photo. Check console.");
+        }
     };
 
     if (!isAuthenticated) {
@@ -90,6 +110,9 @@ const Admin: React.FC = () => {
                             <div key={item.id} className="surprise-card">
                                 <div className="image-wrapper">
                                     <img src={item.url} alt="Selfie" />
+                                    <button onClick={() => handleDelete(item.id)} className="delete-btn" aria-label="Delete">
+                                        <Trash2 size={20} />
+                                    </button>
                                 </div>
                                 <div className="surprise-info">
                                     <p className="date">{new Date(item.date).toLocaleString()}</p>
