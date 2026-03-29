@@ -72,6 +72,8 @@
     opacity: 1;
     /* Keeping visible for ease of use on mobile */
     transition: opacity 0.3s;
+    z-index: 50;
+    pointer-events: auto;
 }
 
 .action-btn {

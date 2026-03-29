@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
-0
+    0
     try {
         await connectDb();
         const { id } = req.body;
@@ -25,7 +25,13 @@ export default async function handler(req, res) {
         }
 
         const rawList = await redis.lRange('surprises_list_final', 0, -1) || [];
-        const itemStringToDelete = rawList.find(item => JSON.parse(item).id === id);
+        const itemStringToDelete = rawList.find(item => {
+            try {
+                return JSON.parse(item).id === id;
+            } catch (e) {
+                return false;
+            }
+        });
 
         if (itemStringToDelete) {
             await redis.lRem('surprises_list_final', 1, itemStringToDelete);
