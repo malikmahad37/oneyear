@@ -101,6 +101,18 @@ export const MemoryProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     },
 
     {
+      id: 'photo-new-batch3-1',
+      type: 'photo',
+      url: '/memories/alishba_third_batch_1.jpg',
+      caption: 'Pyari si Screenshot 📸'
+    },
+    {
+      id: 'photo-new-batch3-2',
+      type: 'photo',
+      url: '/memories/alishba_third_batch_2.jpg',
+      caption: 'Streak 🔥'
+    },
+    {
       id: 'photo-new-batch2-1',
       type: 'photo',
       url: '/memories/alishba_second_batch_1.jpg',
