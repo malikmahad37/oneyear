@@ -188,7 +188,7 @@ export const MemoryProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       id: 'photo-5',
       type: 'photo',
       url: '/memories/alishba5.jpg',
-      caption: 'Beautiful ❤️'
+      caption: 'Haseen ❤️'
     },
     {
       id: 'photo-6',
