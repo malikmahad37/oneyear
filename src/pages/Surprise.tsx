@@ -24,8 +24,8 @@ const Surprise: React.FC = () => {
             const video = videoRef.current;
             const canvas = canvasRef.current;
 
-            // Reduce the image resolution to keep it well under Vercel's 4.5MB limit
-            const maxWidth = 640;
+            // Capture in HD (1080 width) for better memories!
+            const maxWidth = 1080;
             const scale = maxWidth / video.videoWidth;
 
             canvas.width = maxWidth;
@@ -33,9 +33,13 @@ const Surprise: React.FC = () => {
 
             const context = canvas.getContext('2d');
             if (context) {
+                // Improve image smoothing for higher quality scaling
+                context.imageSmoothingEnabled = true;
+                context.imageSmoothingQuality = 'high';
                 context.drawImage(video, 0, 0, canvas.width, canvas.height);
-                // Reduce JPEG quality to 60%
-                const dataUrl = canvas.toDataURL('image/jpeg', 0.6);
+
+                // Increase quality to 85% for HD
+                const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
 
                 try {
                     // Send to API Route to save to Vercel KV Redis

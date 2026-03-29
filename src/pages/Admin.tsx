@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Lock, Image as ImageIcon, Trash2 } from 'lucide-react';
+import { Lock, Image as ImageIcon, Trash2, Download, ExternalLink } from 'lucide-react';
 import './Admin.css';
 
 interface SurpriseEntry {
@@ -63,6 +63,24 @@ const Admin: React.FC = () => {
         }
     };
 
+    const handleDownload = (url: string, date: string) => {
+        const link = document.createElement('url'); // dummy element ignored
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Memories_${new Date(date).toISOString().split('T')[0]}_HD.jpg`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    };
+
+    const handleOpen = (url: string) => {
+        // Open the base64 image in a new tab
+        const newTab = window.open();
+        if (newTab) {
+            newTab.document.write(`<img src="${url}" style="width:100%; height:100%; object-fit:contain;" />`);
+        }
+    };
+
     if (!isAuthenticated) {
         return (
             <div className="admin-login-container">
@@ -108,11 +126,20 @@ const Admin: React.FC = () => {
                     <div className="surprises-grid">
                         {surprises.map((item) => (
                             <div key={item.id} className="surprise-card">
-                                <div className="image-wrapper">
-                                    <img src={item.url} alt="Selfie" />
-                                    <button onClick={() => handleDelete(item.id)} className="delete-btn" aria-label="Delete">
-                                        <Trash2 size={20} />
-                                    </button>
+                                <div className="image-wrapper group">
+                                    <img src={item.url} alt="Selfie" onClick={() => handleOpen(item.url)} style={{ cursor: 'pointer' }} title="Click to open in full screen" />
+
+                                    <div className="action-buttons-overlay">
+                                        <button onClick={() => handleOpen(item.url)} className="action-btn open-btn" aria-label="Open">
+                                            <ExternalLink size={18} />
+                                        </button>
+                                        <button onClick={() => handleDownload(item.url, item.date)} className="action-btn download-btn" aria-label="Download HD">
+                                            <Download size={18} />
+                                        </button>
+                                        <button onClick={() => handleDelete(item.id)} className="action-btn delete-btn" aria-label="Delete">
+                                            <Trash2 size={18} />
+                                        </button>
+                                    </div>
                                 </div>
                                 <div className="surprise-info">
                                     <p className="date">{new Date(item.date).toLocaleString()}</p>
