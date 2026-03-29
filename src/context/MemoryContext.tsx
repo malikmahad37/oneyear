@@ -230,7 +230,7 @@ export const MemoryProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       id: 'photo-12',
       type: 'photo',
       url: '/memories/chat24.jpg',
-      caption: 'Snapchat 10 ✨'
+      caption: 'Khoobsurat ✨'
     }
   ]);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
