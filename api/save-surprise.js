@@ -6,12 +6,9 @@ const redis = createClient({
 
 // Avoid reconnecting on every API call in serverless environment
 redis.on('error', (err) => console.log('Redis Client Error', err));
-let isConnected = false;
-
 const connectDb = async () => {
-    if (!isConnected) {
+    if (!redis.isReady && !redis.isOpen) {
         await redis.connect();
-        isConnected = true;
     }
 }
 

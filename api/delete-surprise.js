@@ -5,12 +5,9 @@ const redis = createClient({
 });
 
 redis.on('error', (err) => console.log('Redis Client Error', err));
-let isConnected = false;
-
 const connectDb = async () => {
-    if (!isConnected) {
+    if (!redis.isReady && !redis.isOpen) {
         await redis.connect();
-        isConnected = true;
     }
 }
 
@@ -18,7 +15,7 @@ export default async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
-
+0
     try {
         await connectDb();
         const { id } = req.body;
