@@ -23,6 +23,10 @@ export default async function handler(req, res) {
         // Parse the JSON strings back to objects
         const surprises = rawList.map(item => JSON.parse(item));
 
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+        res.setHeader('Pragma', 'no-cache');
+        res.setHeader('Expires', '0');
+
         return res.status(200).json({ success: true, surprises });
     } catch (error) {
         console.error('Error fetching from Redis:', error);
