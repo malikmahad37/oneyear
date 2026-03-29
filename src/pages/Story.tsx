@@ -22,26 +22,6 @@ const events: TimelineEvent[] = [
     },
     {
         id: 2,
-        date: 'March 2025',
-        title: 'Pyari Baatein',
-        description: 'Sirf tum se baat karne ke liye der tak jagna. Har message ek nayi muskurahat le kar aata tha.',
-        image: 'https://images.unsplash.com/photo-1520690214124-2405c5217036?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    },
-    {
-        id: 3,
-        date: 'April 2025',
-        title: 'Snapchat Streak',
-        description: 'Humne apni streak shuru ki aur usay har roz barkarar rakha. Ye hamare rozana juday rehne ki ek pyari si nishani ban gayi.',
-    },
-    {
-        id: 4,
-        date: 'May 2025',
-        title: 'Khubsoorat Yaadein',
-        description: 'Har mushkil waqt se guzar kar humne apne pyar aur aitbaar ko aur bhi mazboot banaya.',
-        image: 'https://images.unsplash.com/photo-1474552226712-ac0f0961a954?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    },
-    {
-        id: 5,
         date: '25 March 2026',
         title: 'Pehli Face-to-Face Mulaqat',
         description: 'Wo khoobsurat din jab hum sach mein pehli baar mile aur maine apne hathon se tumhe brownie khilai. Yeh din hamesha ke liye meri aakhon mein qaid ho gaya.',
