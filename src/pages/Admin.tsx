@@ -64,7 +64,6 @@ const Admin: React.FC = () => {
     };
 
     const handleDownload = (url: string, date: string) => {
-        const link = document.createElement('url'); // dummy element ignored
         const a = document.createElement('a');
         a.href = url;
         a.download = `Memories_${new Date(date).toISOString().split('T')[0]}_HD.jpg`;
