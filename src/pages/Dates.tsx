@@ -40,10 +40,17 @@ const Dates: React.FC = () => {
         },
         {
             id: 4,
+            title: 'Haqeeqat Mein Mulaqat',
+            value: 'Mar 25',
+            desc: 'Pehli face-to-face mulaqat aur brownie wali pyari yaad.',
+            icon: <Gift size={36} />
+        },
+        {
+            id: 5,
             title: 'Aane Wali Anniversaries',
             value: 'Hamesha',
             desc: 'Khoobsurat yadon ka silsila jo kabhi khatam nahi hoga.',
-            icon: <Gift size={36} />
+            icon: <Stars size={36} />
         }
     ];
 

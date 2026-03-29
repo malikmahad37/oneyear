@@ -39,6 +39,13 @@ const events: TimelineEvent[] = [
         title: 'Khubsoorat Yaadein',
         description: 'Har mushkil waqt se guzar kar humne apne pyar aur aitbaar ko aur bhi mazboot banaya.',
         image: 'https://images.unsplash.com/photo-1474552226712-ac0f0961a954?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+    },
+    {
+        id: 5,
+        date: '25 March 2026',
+        title: 'Pehli Face-to-Face Mulaqat',
+        description: 'Wo khoobsurat din jab hum sach mein pehli baar mile aur maine apne hathon se tumhe brownie khilai. Yeh din hamesha ke liye meri aakhon mein qaid ho gaya.',
+        image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     }
 ];
 
